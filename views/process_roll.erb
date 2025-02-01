@@ -3,11 +3,15 @@
 </h1>
 
 <div>
-  Roll again | Go back home
+  <a href="/process_roll/<%=@dice%>/<%=@sides%>">Roll again</a> | 
+  <a href="/">Go back home</a>
 </div>
 
 <ol>
   <% @rolls.each do |roll| %>
-    <li> Result: <%= roll %> </li>
+    <li>
+      <span style="font-style: italic">Result: </span>
+      <span style="font-weight: bold"><%= roll %></span> 
+    </li>
   <% end %>
 </ol>
