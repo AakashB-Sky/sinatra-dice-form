@@ -1,3 +1,13 @@
 <h1>
   <%= @dice %>d<%= @sides %>
 </h1>
+
+<div>
+  Roll again | Go back home
+</div>
+
+<ol>
+  <% @rolls.each do |roll| %>
+    <li> Result: <%= roll %> </li>
+  <% end %>
+</ol>

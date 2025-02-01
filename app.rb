@@ -9,8 +9,16 @@ get("/") do
 end
 
 get("/process_roll/:dice/:sides") do
-  @dice = params.fetch("dice")
-  @sides = params.fetch("sides")
+  # define variables
+  @dice = params.fetch("dice").to_i
+  @sides = params.fetch("sides").to_i
+  @rolls = Array.new
+
+  # roll the dice
+  @dice.times do
+    roll = rand(1..@sides)
+    @rolls.push(roll)
+  end
 
   erb(:process_roll)
 end
