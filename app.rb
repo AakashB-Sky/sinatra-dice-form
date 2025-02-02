@@ -5,7 +5,7 @@ get("/") do
   erb(:index)
 end
 
-get("/process_roll/:dice/:sides") do
+get("/process_roll") do
   # define variables
   @dice = params.fetch("dice").to_i
   @sides = params.fetch("sides").to_i
